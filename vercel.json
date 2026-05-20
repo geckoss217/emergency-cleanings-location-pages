@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "ec-location-pages",
+  "builds": [
+    { "src": "florida-hoarding-cleanup/index.html", "use": "@vercel/static" },
+    { "src": "ohio-hoarding-cleanup/index.html",    "use": "@vercel/static" },
+    { "src": "shared/styles.css",                   "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/florida-hoarding-cleanup", "dest": "/florida-hoarding-cleanup/index.html" },
+    { "src": "/ohio-hoarding-cleanup",    "dest": "/ohio-hoarding-cleanup/index.html" },
+    { "src": "/shared/(.*)",              "dest": "/shared/$1" }
+  ]
+}
