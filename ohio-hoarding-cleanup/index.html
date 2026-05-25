@@ -11,6 +11,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/shared/styles.css" />
+  <style>
+    .hero__keyword { display:block; font-size:1.05rem; font-weight:700; color:var(--yellow); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:12px; }
+    .hero__emotional { font-size:1.3rem; font-weight:600; color:rgba(255,255,255,0.8); margin:4px 0 20px; }
+    .hero__divider { margin:16px 0 8px; font-size:0.88rem; color:rgba(255,255,255,0.4); }
+    .hero__phone-link { color:var(--yellow); font-weight:700; text-decoration:none; }
+    .hero-form-wrap { background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.13); border-radius:12px; padding:28px 28px 20px; margin:24px 0 0; max-width:580px; }
+    .hero-form__row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+    .hero-form__input { width:100%; padding:13px 15px; border:1.5px solid rgba(255,255,255,0.18); border-radius:8px; background:rgba(255,255,255,0.07); color:#fff; font-family:'Inter',sans-serif; font-size:0.95rem; box-sizing:border-box; transition:border-color .2s; }
+    .hero-form__input::placeholder { color:rgba(255,255,255,0.38); }
+    .hero-form__input:focus { outline:none; border-color:var(--yellow); background:rgba(255,255,255,0.11); }
+    .hero-form__input--full { display:block; margin-bottom:12px; }
+    .hero-form__btn { width:100%; padding:15px; font-size:1rem; margin-top:2px; }
+    .hero-form__note { font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:10px; text-align:center; }
+    .hero-form__success { color:#fff; padding:4px 0; line-height:1.7; }
+    .hero-form__success a { color:var(--yellow); font-weight:600; }
+    @media(max-width:540px){ .hero-form__row { grid-template-columns:1fr; } }
+  </style>
 
   <!-- Schema: LocalBusiness -->
   <script type="application/ld+json">
@@ -52,18 +69,30 @@
      ============================ -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow hero__label">Ohio Hoarding Cleanup</span>
-    <h1>You don't have<br>to face this alone.</h1>
+    <h1>Hoarding Cleanup Services<br>in Ohio</h1>
+    <p class="hero__emotional">You don't have to face this alone.</p>
     <p class="hero__sub">
-      Cleaning out a home with hoarding accumulation is one of the hardest situations a person can face.
-      You're dealing with emotional complexity, physical overwhelm, and often grief.
-      We've handled hundreds of situations like yours — and we know exactly how to approach it
-      with respect, efficiency, and care.
+      Trained specialists serving all of Ohio — judgment-free, discreet, and fully equipped
+      for hoarding, clutter, biohazard, and unsafe living conditions of any severity.
     </p>
-    <div class="hero__ctas">
-      <a class="btn btn--primary" href="tel:8333464652">📞 Call 833-346-4652</a>
-      <a class="btn btn--secondary" href="#how-it-works">See How It Works ↓</a>
+
+    <!-- Above-fold quote form -->
+    <div class="hero-form-wrap" id="hero-form-wrap">
+      <form id="hero-quote-form" class="hero-form">
+        <div class="hero-form__row">
+          <input class="hero-form__input" type="text" name="your-name" placeholder="Your Name" required />
+          <input class="hero-form__input" type="tel" name="your-phone" placeholder="Phone Number" required />
+        </div>
+        <input class="hero-form__input hero-form__input--full" type="email" name="your-email" placeholder="Email Address" required />
+        <button class="btn btn--primary hero-form__btn" type="submit">Get a Free Assessment →</button>
+        <p class="hero-form__note">No commitment. We'll call you within minutes.</p>
+      </form>
+      <div id="hero-form-success" class="hero-form__success" style="display:none;">
+        <p>✅ <strong>Request received.</strong> Our team will call you within minutes.</p>
+        <p>Need to reach us now? <a href="tel:8333464652">833-346-4652</a></p>
+      </div>
     </div>
+    <p class="hero__divider">— or call us directly: <a class="hero__phone-link" href="tel:8333464652">833-346-4652</a></p>
 
     <!-- Stats bar -->
     <div class="stats-bar">
@@ -73,7 +102,7 @@
       </div>
       <div class="stat">
         <span class="stat__num">$0</span>
-        <span class="stat__label">Cost for on-site walkthrough</span>
+        <span class="stat__label">On-site assessment</span>
       </div>
       <div class="stat">
         <span class="stat__num">Flat</span>
@@ -82,6 +111,76 @@
       <div class="stat">
         <span class="stat__num">Same</span>
         <span class="stat__label">Day available — always</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">✓</span>
+        <span class="stat__label">Licensed &amp; Insured</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     WHAT WE HELP WITH
+     ============================ -->
+<section class="section section--light">
+  <div class="container">
+    <span class="eyebrow">What We Help With</span>
+    <h2>We're equipped for the full scope.</h2>
+    <p style="color:#4a5568; max-width:600px; margin: 12px 0 0;">
+      Every hoarding situation is different. Here's what's typically included in an EC cleanup — and what
+      separates a trained response from a general cleaning crew.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <span class="feature__icon">🧹</span>
+        <h3>Full Clearance of Accumulated Materials</h3>
+        <p>
+          Responsible removal of items throughout the property — sorted where possible for donation,
+          recycling, or proper disposal. We handle volume no general cleaner will touch.
+        </p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon">🦺</span>
+        <h3>Biohazard &amp; Contamination Handling</h3>
+        <p>
+          Animal waste, mold, sewage exposure, pest activity — our team is trained and equipped
+          for situations that require certified protocols, not just rubber gloves.
+        </p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon">🏠</span>
+        <h3>Room-by-Room Restoration</h3>
+        <p>
+          We work through every room systematically — kitchens, bathrooms, bedrooms, garages —
+          until the property is functional again. No cherry-picking the easy parts.
+        </p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon">📋</span>
+        <h3>Documentation &amp; Photo Record</h3>
+        <p>
+          We document conditions before, during, and after — useful for family members,
+          property owners, attorneys, or social service agencies involved in the situation.
+        </p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon">🤝</span>
+        <h3>Discreet, Judgment-Free Service</h3>
+        <p>
+          Unmarked vehicles available on request. Our team works without drawing attention.
+          We understand the sensitivity of these situations and approach them accordingly.
+        </p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon">❄️</span>
+        <h3>Winter &amp; Year-Round Access</h3>
+        <p>
+          Ohio winters create real access and safety challenges on job sites.
+          Our crews are prepared to work safely in cold conditions — and we factor
+          seasonal access issues into the scope assessment from the start.
+        </p>
       </div>
     </div>
   </div>
@@ -158,72 +257,6 @@
             you can move forward from.
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================
-     WHAT'S INCLUDED
-     ============================ -->
-<section class="section section--light">
-  <div class="container">
-    <span class="eyebrow">What We Handle</span>
-    <h2>We're equipped for the full scope.</h2>
-    <p style="color:#4a5568; max-width:600px; margin: 12px 0 0;">
-      Every hoarding situation is different. Here's what's typically included in an EC cleanup — and what
-      separates a trained response from a general cleaning crew.
-    </p>
-
-    <div class="features">
-      <div class="feature">
-        <span class="feature__icon">🧹</span>
-        <h3>Full Clearance of Accumulated Materials</h3>
-        <p>
-          Responsible removal of items throughout the property — sorted where possible for donation,
-          recycling, or proper disposal. We handle volume no general cleaner will touch.
-        </p>
-      </div>
-      <div class="feature">
-        <span class="feature__icon">🦺</span>
-        <h3>Biohazard &amp; Contamination Handling</h3>
-        <p>
-          Animal waste, mold, sewage exposure, pest activity — our team is trained and equipped
-          for situations that require certified protocols, not just rubber gloves.
-        </p>
-      </div>
-      <div class="feature">
-        <span class="feature__icon">🏠</span>
-        <h3>Room-by-Room Restoration</h3>
-        <p>
-          We work through every room systematically — kitchens, bathrooms, bedrooms, garages —
-          until the property is functional again. No cherry-picking the easy parts.
-        </p>
-      </div>
-      <div class="feature">
-        <span class="feature__icon">📋</span>
-        <h3>Documentation &amp; Photo Record</h3>
-        <p>
-          We document conditions before, during, and after — useful for family members,
-          property owners, attorneys, or social service agencies involved in the situation.
-        </p>
-      </div>
-      <div class="feature">
-        <span class="feature__icon">🤝</span>
-        <h3>Discreet, Judgment-Free Service</h3>
-        <p>
-          Unmarked vehicles available on request. Our team works without drawing attention.
-          We understand the sensitivity of these situations and approach them accordingly.
-        </p>
-      </div>
-      <div class="feature">
-        <span class="feature__icon">❄️</span>
-        <h3>Winter &amp; Year-Round Access</h3>
-        <p>
-          Ohio winters create real access and safety challenges on job sites.
-          Our crews are prepared to work safely in cold conditions — and we factor
-          seasonal access issues into the scope assessment from the start.
-        </p>
       </div>
     </div>
   </div>
@@ -417,4 +450,69 @@
      FINAL CTA
      ============================ -->
 <section class="cta-section">
-  <
+  <div class="container">
+    <span class="eyebrow" style="color:var(--blue-accent);">Ready to take the first step?</span>
+    <h2>Your free assessment is one call away.</h2>
+    <p>
+      We'll talk through the situation and give you a verbal estimate right on the call.
+      A 20% deposit locks in your walkthrough date and our commitment to your project —
+      credited in full when work begins. Transparent from the first call to the last day on site.
+    </p>
+    <div class="cta-buttons">
+      <a class="btn btn--primary" href="tel:8333464652">📞 Call 833-346-4652</a>
+      <a class="btn btn--secondary" href="https://emergencycleanings.com/fresh-start/">💛 Ask About Fresh Start Savings</a>
+    </div>
+    <p style="margin-top:24px; font-size:0.88rem; color:rgba(255,255,255,0.45);">
+      Can't call right now? Visit <a href="https://emergencycleanings.com" style="color:rgba(255,255,255,0.6);">emergencycleanings.com</a> to learn more.
+    </p>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+     ============================ -->
+<footer class="footer">
+  <div class="container">
+    <p>
+      © 2026 Emergency Cleanings &nbsp;·&nbsp;
+      <a href="https://emergencycleanings.com">emergencycleanings.com</a> &nbsp;·&nbsp;
+      <a href="tel:8333464652">833-346-4652</a> &nbsp;·&nbsp;
+      Professional &nbsp;·&nbsp; Trained &nbsp;·&nbsp; Reliable
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hero-quote-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const fd = new FormData();
+  fd.append('_wpcf7', '6');
+  fd.append('_wpcf7_locale', 'en_US');
+  fd.append('_wpcf7_unit_tag', 'wpcf7-f6-p9-o1');
+  fd.append('_wpcf7_container_post', '9');
+  fd.append('_wpcf7_posted_data_hash', '');
+  fd.append('your-subject', 'Ohio Hoarding Cleanup — State Landing Page');
+  fd.append('your-name', form['your-name'].value);
+  fd.append('your-phone', form['your-phone'].value);
+  fd.append('your-email', form['your-email'].value);
+
+  try {
+    await fetch('https://emergencycleanings.com/wp-json/contact-form-7/v1/contact-forms/6/feedback', {
+      method: 'POST', body: fd, mode: 'cors'
+    });
+  } catch(err) {
+    window.location.href = 'https://emergencycleanings.com/';
+    return;
+  }
+
+  document.getElementById('hero-form-success').style.display = 'block';
+  form.style.display = 'none';
+});
+</script>
+</body>
+</html>
