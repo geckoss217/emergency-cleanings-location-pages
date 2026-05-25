@@ -10,23 +10,32 @@
   <meta property="og:url" content="https://emergencycleanings.com/ohio-hoarding-cleanup/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/shared/styles.css" />
+  <link rel="stylesheet" href="../shared/styles.css" />
   <style>
-    .hero__keyword { display:block; font-size:1.05rem; font-weight:700; color:var(--yellow); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:12px; }
-    .hero__emotional { font-size:1.3rem; font-weight:600; color:rgba(255,255,255,0.8); margin:4px 0 20px; }
-    .hero__divider { margin:16px 0 8px; font-size:0.88rem; color:rgba(255,255,255,0.4); }
-    .hero__phone-link { color:var(--yellow); font-weight:700; text-decoration:none; }
-    .hero-form-wrap { background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.13); border-radius:12px; padding:28px 28px 20px; margin:24px 0 0; max-width:580px; }
-    .hero-form__row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
-    .hero-form__input { width:100%; padding:13px 15px; border:1.5px solid rgba(255,255,255,0.18); border-radius:8px; background:rgba(255,255,255,0.07); color:#fff; font-family:'Inter',sans-serif; font-size:0.95rem; box-sizing:border-box; transition:border-color .2s; }
-    .hero-form__input::placeholder { color:rgba(255,255,255,0.38); }
-    .hero-form__input:focus { outline:none; border-color:var(--yellow); background:rgba(255,255,255,0.11); }
-    .hero-form__input--full { display:block; margin-bottom:12px; }
-    .hero-form__btn { width:100%; padding:15px; font-size:1rem; margin-top:2px; }
-    .hero-form__note { font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:10px; text-align:center; }
-    .hero-form__success { color:#fff; padding:4px 0; line-height:1.7; }
+    /* Hero two-column layout */
+    .hero__inner { display:grid; grid-template-columns:1fr 440px; gap:48px; align-items:center; }
+    .hero__emotional { font-size:1.2rem; font-weight:600; color:rgba(255,255,255,0.75); margin:8px 0 16px; }
+    .hero__phone-cta { display:inline-flex; align-items:center; gap:8px; margin-bottom:22px; padding:15px 28px; font-size:1rem; }
+    /* Trust badge pills */
+    .trust-badges { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; }
+    .trust-badge { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.9); border-radius:100px; padding:7px 14px; font-size:0.8rem; font-weight:600; white-space:nowrap; }
+    /* Form card */
+    .form-card { background:#071525; border:1px solid rgba(255,255,255,0.1); border-top:4px solid var(--yellow); border-radius:14px; padding:28px 24px 20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); }
+    .form-card__title { color:#fff; font-size:1.15rem; font-weight:800; margin:0 0 5px; }
+    .form-card__sub { color:rgba(255,255,255,0.48); font-size:0.82rem; margin:0 0 18px; }
+    .form-card__label { display:block; color:rgba(255,255,255,0.65); font-size:0.79rem; font-weight:600; margin:13px 0 5px; letter-spacing:0.01em; }
+    .form-card__input { width:100%; padding:11px 14px; border:1.5px solid rgba(255,255,255,0.12); border-radius:8px; background:rgba(255,255,255,0.06); color:#fff; font-family:'Inter',sans-serif; font-size:0.9rem; box-sizing:border-box; transition:border-color .2s,background .2s; }
+    .form-card__input::placeholder { color:rgba(255,255,255,0.28); }
+    .form-card__input:focus { outline:none; border-color:var(--yellow); background:rgba(255,255,255,0.09); }
+    .form-card__select { appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; cursor:pointer; }
+    .form-card__select option { background:#071525; color:#fff; }
+    .form-card__textarea { resize:vertical; min-height:78px; }
+    .form-card__btn { width:100%; padding:14px; font-size:0.97rem; margin-top:16px; }
+    .form-card__note { text-align:center; font-size:0.75rem; color:rgba(255,255,255,0.3); margin:9px 0 0; }
+    .hero-form__success { color:#fff; line-height:1.7; padding:4px 0; }
     .hero-form__success a { color:var(--yellow); font-weight:600; }
-    @media(max-width:540px){ .hero-form__row { grid-template-columns:1fr; } }
+    @media(max-width:940px){ .hero__inner { grid-template-columns:1fr; gap:32px; } .hero__right { max-width:520px; } }
+    @media(max-width:540px){ .trust-badge { font-size:0.74rem; padding:6px 11px; } }
   </style>
 
   <!-- Schema: LocalBusiness -->
@@ -69,53 +78,81 @@
      ============================ -->
 <section class="hero">
   <div class="container">
-    <h1>Hoarding Cleanup Services<br>in Ohio</h1>
-    <p class="hero__emotional">You don't have to face this alone.</p>
-    <p class="hero__sub">
-      Trained specialists serving all of Ohio — judgment-free, discreet, and fully equipped
-      for hoarding, clutter, biohazard, and unsafe living conditions of any severity.
-    </p>
+    <div class="hero__inner">
 
-    <!-- Above-fold quote form -->
-    <div class="hero-form-wrap" id="hero-form-wrap">
-      <form id="hero-quote-form" class="hero-form">
-        <div class="hero-form__row">
-          <input class="hero-form__input" type="text" name="your-name" placeholder="Your Name" required />
-          <input class="hero-form__input" type="tel" name="your-phone" placeholder="Phone Number" required />
+      <!-- LEFT: Copy + trust signals -->
+      <div class="hero__left">
+        <h1>Hoarding Cleanup Services<br>in Ohio</h1>
+        <p class="hero__emotional">You don't have to face this alone.</p>
+        <p class="hero__sub">
+          Trained specialists serving all of Ohio — judgment-free, discreet, and fully equipped
+          for hoarding, clutter, biohazard, and unsafe living conditions of any severity.
+        </p>
+
+        <a class="btn btn--primary hero__phone-cta" href="tel:8333464652">📞 Call 833-346-4652 — Free Quote</a>
+
+        <div class="trust-badges">
+          <span class="trust-badge">✅ Same-Day Available</span>
+          <span class="trust-badge">🛡 Licensed &amp; Insured</span>
+          <span class="trust-badge">🤝 Insurance Assistance</span>
+          <span class="trust-badge">🔒 100% Discreet</span>
+          <span class="trust-badge">⭐ Highly Rated</span>
         </div>
-        <input class="hero-form__input hero-form__input--full" type="email" name="your-email" placeholder="Email Address" required />
-        <button class="btn btn--primary hero-form__btn" type="submit">Get a Free Assessment →</button>
-        <p class="hero-form__note">No commitment. We'll call you within minutes.</p>
-      </form>
-      <div id="hero-form-success" class="hero-form__success" style="display:none;">
-        <p>✅ <strong>Request received.</strong> Our team will call you within minutes.</p>
-        <p>Need to reach us now? <a href="tel:8333464652">833-346-4652</a></p>
-      </div>
-    </div>
-    <p class="hero__divider">— or call us directly: <a class="hero__phone-link" href="tel:8333464652">833-346-4652</a></p>
 
-    <!-- Stats bar -->
-    <div class="stats-bar">
-      <div class="stat">
-        <span class="stat__num">200+</span>
-        <span class="stat__label">Hoarding situations handled</span>
+        <div class="stats-bar">
+          <div class="stat">
+            <span class="stat__num">1,000+</span>
+            <span class="stat__label">Jobs Completed</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">25+</span>
+            <span class="stat__label">States Served</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">24/7</span>
+            <span class="stat__label">Rapid Dispatch</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">$0</span>
+            <span class="stat__label">On-Site Assessment</span>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num">$0</span>
-        <span class="stat__label">On-site assessment</span>
+
+      <!-- RIGHT: Floating form card -->
+      <div class="hero__right">
+        <div class="form-card" id="hero-form-wrap">
+          <h3 class="form-card__title">Get a Free Assessment</h3>
+          <p class="form-card__sub">No obligation — a specialist will call you shortly</p>
+          <form id="hero-quote-form">
+            <label class="form-card__label">Full Name</label>
+            <input class="form-card__input" type="text" name="your-name" placeholder="Your full name" required />
+            <label class="form-card__label">Phone Number</label>
+            <input class="form-card__input" type="tel" name="your-phone" placeholder="Your phone number" required />
+            <label class="form-card__label">Email Address</label>
+            <input class="form-card__input" type="email" name="your-email" placeholder="your@email.com" required />
+            <label class="form-card__label">Service Needed</label>
+            <select class="form-card__input form-card__select" name="your-service">
+              <option value="">Select a service</option>
+              <option value="Hoarding Cleanup">Hoarding Cleanup</option>
+              <option value="Biohazard Cleanup">Biohazard Cleanup</option>
+              <option value="Clutter Removal">Clutter Removal</option>
+              <option value="Estate Cleanout">Estate Cleanout</option>
+              <option value="Unsafe Living Conditions">Unsafe Living Conditions</option>
+              <option value="Other">Other</option>
+            </select>
+            <label class="form-card__label">Brief Description</label>
+            <textarea class="form-card__input form-card__textarea" name="your-message" placeholder="How can we help?"></textarea>
+            <button class="btn btn--primary form-card__btn" type="submit">Request My Free Assessment →</button>
+            <p class="form-card__note">🔒 100% confidential. Never shared.</p>
+          </form>
+          <div id="hero-form-success" class="hero-form__success" style="display:none;">
+            <p>✅ <strong>Request received.</strong> Our team will call you within minutes.</p>
+            <p>Need to reach us now? <a href="tel:8333464652">833-346-4652</a></p>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num">Flat</span>
-        <span class="stat__label">Rate — locked before we start</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">Same</span>
-        <span class="stat__label">Day available — always</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">✓</span>
-        <span class="stat__label">Licensed &amp; Insured</span>
-      </div>
+
     </div>
   </div>
 </section>
@@ -440,79 +477,4 @@
       </details>
       <details class="faq-item">
         <summary>What happens to the items you remove?</summary>
-        <p>We sort where possible — items that can be donated go to donation, recyclables are handled responsibly. What can't be reused is disposed of through proper channels. We document the process and handle everything with respect for the property and the people involved.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============================
-     FINAL CTA
-     ============================ -->
-<section class="cta-section">
-  <div class="container">
-    <span class="eyebrow" style="color:var(--blue-accent);">Ready to take the first step?</span>
-    <h2>Your free assessment is one call away.</h2>
-    <p>
-      We'll talk through the situation and give you a verbal estimate right on the call.
-      A 20% deposit locks in your walkthrough date and our commitment to your project —
-      credited in full when work begins. Transparent from the first call to the last day on site.
-    </p>
-    <div class="cta-buttons">
-      <a class="btn btn--primary" href="tel:8333464652">📞 Call 833-346-4652</a>
-      <a class="btn btn--secondary" href="https://emergencycleanings.com/fresh-start/">💛 Ask About Fresh Start Savings</a>
-    </div>
-    <p style="margin-top:24px; font-size:0.88rem; color:rgba(255,255,255,0.45);">
-      Can't call right now? Visit <a href="https://emergencycleanings.com" style="color:rgba(255,255,255,0.6);">emergencycleanings.com</a> to learn more.
-    </p>
-  </div>
-</section>
-
-<!-- ============================
-     FOOTER
-     ============================ -->
-<footer class="footer">
-  <div class="container">
-    <p>
-      © 2026 Emergency Cleanings &nbsp;·&nbsp;
-      <a href="https://emergencycleanings.com">emergencycleanings.com</a> &nbsp;·&nbsp;
-      <a href="tel:8333464652">833-346-4652</a> &nbsp;·&nbsp;
-      Professional &nbsp;·&nbsp; Trained &nbsp;·&nbsp; Reliable
-    </p>
-  </div>
-</footer>
-
-<script>
-document.getElementById('hero-quote-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  const fd = new FormData();
-  fd.append('_wpcf7', '6');
-  fd.append('_wpcf7_locale', 'en_US');
-  fd.append('_wpcf7_unit_tag', 'wpcf7-f6-p9-o1');
-  fd.append('_wpcf7_container_post', '9');
-  fd.append('_wpcf7_posted_data_hash', '');
-  fd.append('your-subject', 'Ohio Hoarding Cleanup — State Landing Page');
-  fd.append('your-name', form['your-name'].value);
-  fd.append('your-phone', form['your-phone'].value);
-  fd.append('your-email', form['your-email'].value);
-
-  try {
-    await fetch('https://emergencycleanings.com/wp-json/contact-form-7/v1/contact-forms/6/feedback', {
-      method: 'POST', body: fd, mode: 'cors'
-    });
-  } catch(err) {
-    window.location.href = 'https://emergencycleanings.com/';
-    return;
-  }
-
-  document.getElementById('hero-form-success').style.display = 'block';
-  form.style.display = 'none';
-});
-</script>
-</body>
-</html>
+        <p>We sort where possible — items that can be donated go to donation, recyclables are handled responsibly. What can't be reused is disposed of through proper channels. We document the process and handle everything with respect for the property and 
